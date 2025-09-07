@@ -1,71 +1,107 @@
-# assembly README
+# 🧠 Assembly IntelliSense
 
-This is the README for your extension "assembly". After writing up a brief description, we recommend including the following sections.
+An ultra-lightweight Visual Studio Code extension that adds intelligent auto-completion for multiple assembly dialects — including **x86**, **AT&T**, **ARM64**, and **6502**.
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Perfect for learning, reverse engineering, or hacking together some retro code.
 
 ---
 
-## Following extension guidelines
+## ✨ Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- 🔧 **Auto-completion** for common assembly instructions:
+  - Intel x86 / NASM
+  - AT&T syntax
+  - ARM64 (AArch64)
+  - 6502 / 6500 family
+- ⚡ Fast and secure build using `esbuild`
+- 🔍 Type-safe and linted with strict ESLint (Flat Config)
+- 🧠 Suggestions appear as you type — no configuration needed
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+## 🖥️ Usage
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+1. Open (or create) a file with the `.asm` extension
+2. Start typing an instruction like `mov`, `add`, `jmp`, etc.
+3. Completion suggestions will appear automatically
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+> Supports all files with the `assembly` language ID.
 
-## For more information
+---
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## 🛠️ Supported Instructions
 
-**Enjoy!**
+### x86 / NASM
+```asm
+mov, add, sub, mul, div, push, pop, call, ret, jmp, je, jne, jl, jg, cmp, lea, inc, dec, xor, and, or, not, shl, shr, nop
+```
+### AT&T Syntax
+```asm
+movq, movl, movb, addq, subq, leal, callq, retq, pushq, popq
+```
+### ARM64 (AArch64)
+```asm
+movz, movk, movn, add, sub, and, orr, eor, ldr, str, b, bl, cbz, cbnz, ret, stp, ldp
+```
+### 6502 / 6500
+
+```asm
+lda, sta, ldx, stx, ldy, sty, inx, dex, iny, dey, adc, sbc, and, ora, eor, jmp, jsr, rts, beq, bne, bit, php, plp
+
+````
+
+---
+
+## 📦 Installation
+
+**From Marketplace (coming soon)**  
+*(will link here once published)*
+
+**From VSIX**
+
+```bash
+vsce package
+code --install-extension assembly-intellisense-0.0.1.vsix
+````
+
+---
+
+## 👨‍💻 Development
+
+Clone and build:
+
+```bash
+git clone https://github.com/yourusername/assembly-intellisense.git
+cd assembly-intellisense
+npm install
+npm run compile
+```
+
+Run it in a dev host:
+
+```bash
+code .
+# Press F5 to launch Extension Development Host
+```
+
+---
+
+## 🧪 Testing
+
+Run unit tests:
+
+```bash
+npm test
+```
+
+---
+
+## 📋 Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md)
+
+---
+
+## 📄 License
+
+MIT © [Boring-Dude](https://github.com/Boring-Dude)
