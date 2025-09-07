@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                        // Modern JS target
+    "lib": ["ES2020"],                         // Use latest language features
+    "module": "CommonJS",                      // Required for VS Code extensions
+    "moduleResolution": "node",
+    "outDir": "dist",                          // Output folder
+    "rootDir": "src",                          // Source folder
+    "strict": true,                            // Enable all strict type-checking options
+    "noImplicitAny": true,                     // Disallow `any` type
+    "noUnusedLocals": true,                    // Warn on unused locals
+    "noUnusedParameters": true,                // Warn on unused parameters
+    "noImplicitReturns": true,                 // Ensure functions return something
+    "noFallthroughCasesInSwitch": true,        // Prevent bugs in switch statements
+    "esModuleInterop": true,                   // Allow interop with CommonJS
+    "forceConsistentCasingInFileNames": true,  // Avoid casing issues on different OS
+    "skipLibCheck": true                       // Speeds up build, safe for extensions
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", ".vscode-test"]
+}
