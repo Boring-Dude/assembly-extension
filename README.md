@@ -1,107 +1,71 @@
-# 🧠 Assembly IntelliSense
+# assembly README
 
-An ultra-lightweight Visual Studio Code extension that adds intelligent auto-completion for multiple assembly dialects — including **x86**, **AT&T**, **ARM64**, and **6502**.
+This is the README for your extension "assembly". After writing up a brief description, we recommend including the following sections.
 
-Perfect for learning, reverse engineering, or hacking together some retro code.
+## Features
 
----
+Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-## ✨ Features
+For example if there is an image subfolder under your extension project workspace:
 
-- 🔧 **Auto-completion** for common assembly instructions:
-  - Intel x86 / NASM
-  - AT&T syntax
-  - ARM64 (AArch64)
-  - 6502 / 6500 family
-- ⚡ Fast and secure build using `esbuild`
-- 🔍 Type-safe and linted with strict ESLint (Flat Config)
-- 🧠 Suggestions appear as you type — no configuration needed
+\!\[feature X\]\(images/feature-x.png\)
 
----
+> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-## 🖥️ Usage
+## Requirements
 
-1. Open (or create) a file with the `.asm` extension
-2. Start typing an instruction like `mov`, `add`, `jmp`, etc.
-3. Completion suggestions will appear automatically
+If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-> Supports all files with the `assembly` language ID.
+## Extension Settings
 
----
+Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
-## 🛠️ Supported Instructions
+For example:
 
-### x86 / NASM
-```asm
-mov, add, sub, mul, div, push, pop, call, ret, jmp, je, jne, jl, jg, cmp, lea, inc, dec, xor, and, or, not, shl, shr, nop
-```
-### AT&T Syntax
-```asm
-movq, movl, movb, addq, subq, leal, callq, retq, pushq, popq
-```
-### ARM64 (AArch64)
-```asm
-movz, movk, movn, add, sub, and, orr, eor, ldr, str, b, bl, cbz, cbnz, ret, stp, ldp
-```
-### 6502 / 6500
+This extension contributes the following settings:
 
-```asm
-lda, sta, ldx, stx, ldy, sty, inx, dex, iny, dey, adc, sbc, and, ora, eor, jmp, jsr, rts, beq, bne, bit, php, plp
+* `myExtension.enable`: Enable/disable this extension.
+* `myExtension.thing`: Set to `blah` to do something.
 
-````
+## Known Issues
+
+Calling out known issues can help limit users opening duplicate issues against your extension.
+
+## Release Notes
+
+Users appreciate release notes as you update your extension.
+
+### 1.0.0
+
+Initial release of ...
+
+### 1.0.1
+
+Fixed issue #.
+
+### 1.1.0
+
+Added features X, Y, and Z.
 
 ---
 
-## 📦 Installation
+## Following extension guidelines
 
-**From Marketplace (coming soon)**  
-*(will link here once published)*
+Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
 
-**From VSIX**
+* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
 
-```bash
-vsce package
-code --install-extension assembly-intellisense-0.0.1.vsix
-````
+## Working with Markdown
 
----
+You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
 
-## 👨‍💻 Development
+* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
+* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
+* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
 
-Clone and build:
+## For more information
 
-```bash
-git clone https://github.com/yourusername/assembly-intellisense.git
-cd assembly-intellisense
-npm install
-npm run compile
-```
+* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
+* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
-Run it in a dev host:
-
-```bash
-code .
-# Press F5 to launch Extension Development Host
-```
-
----
-
-## 🧪 Testing
-
-Run unit tests:
-
-```bash
-npm test
-```
-
----
-
-## 📋 Changelog
-
-See [CHANGELOG.md](./CHANGELOG.md)
-
----
-
-## 📄 License
-
-MIT © [Boring-Dude](https://github.com/Boring-Dude)
+**Enjoy!**
